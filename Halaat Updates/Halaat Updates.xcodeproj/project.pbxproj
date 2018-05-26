@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2A1700B7A9B2631A138AC3CC /* Pods_Halaat_Updates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */; };
+		E808215820B82F4300EAA667 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E808215720B82F4300EAA667 /* Protocols.swift */; };
+		E8775DDD20B99AB3001282BA /* HalatFeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8775DDC20B99AB3001282BA /* HalatFeedsViewController.swift */; };
+		E8775DDF20B99BA8001282BA /* HalatFeedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8775DDE20B99BA8001282BA /* HalatFeedsViewModel.swift */; };
 		E89A212E20B528CA006335B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A212D20B528CA006335B2 /* AppDelegate.swift */; };
 		E89A213020B528CA006335B2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A212F20B528CA006335B2 /* SignInViewController.swift */; };
 		E89A213320B528CA006335B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89A213120B528CA006335B2 /* Main.storyboard */; };
@@ -19,10 +22,21 @@
 		E89A214B20B52CED006335B2 /* SignInCred.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A214A20B52CED006335B2 /* SignInCred.swift */; };
 		E89A214F20B52DE1006335B2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A214E20B52DE1006335B2 /* Utils.swift */; };
 		E89A215120B52E35006335B2 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215020B52E35006335B2 /* DateUtils.swift */; };
+		E89A215420B5338F006335B2 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215320B5338F006335B2 /* Toast.swift */; };
+		E89A215820B534A7006335B2 /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215720B534A7006335B2 /* SharedModel.swift */; };
+		E89A215A20B5357C006335B2 /* WebRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215920B5357C006335B2 /* WebRoutes.swift */; };
+		E89A215F20B585CC006335B2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215E20B585CC006335B2 /* Extensions.swift */; };
+		E89A216120B585FD006335B2 /* SharedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A216020B585FD006335B2 /* SharedModels.swift */; };
+		E89A216320B587DF006335B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A216220B587DF006335B2 /* Constants.swift */; };
+		E8DCEFFB20B9DF43000734A8 /* HalatFeedsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DCEFFA20B9DF43000734A8 /* HalatFeedsTableViewCell.swift */; };
+		E8DCEFFD20BA18F5000734A8 /* HalatFeedsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DCEFFC20BA18F5000734A8 /* HalatFeedsCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DBBA209102DEF1F61A5B8714 /* Pods-Halaat Updates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halaat Updates.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates.debug.xcconfig"; sourceTree = "<group>"; };
+		E808215720B82F4300EAA667 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		E8775DDC20B99AB3001282BA /* HalatFeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalatFeedsViewController.swift; sourceTree = "<group>"; };
+		E8775DDE20B99BA8001282BA /* HalatFeedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalatFeedsViewModel.swift; sourceTree = "<group>"; };
 		E89A212A20B528CA006335B2 /* Halaat Updates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halaat Updates.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89A212D20B528CA006335B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E89A212F20B528CA006335B2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +50,14 @@
 		E89A214A20B52CED006335B2 /* SignInCred.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCred.swift; sourceTree = "<group>"; };
 		E89A214E20B52DE1006335B2 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E89A215020B52E35006335B2 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		E89A215320B5338F006335B2 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		E89A215720B534A7006335B2 /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
+		E89A215920B5357C006335B2 /* WebRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRoutes.swift; sourceTree = "<group>"; };
+		E89A215E20B585CC006335B2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E89A216020B585FD006335B2 /* SharedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModels.swift; sourceTree = "<group>"; };
+		E89A216220B587DF006335B2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E8DCEFFA20B9DF43000734A8 /* HalatFeedsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalatFeedsTableViewCell.swift; sourceTree = "<group>"; };
+		E8DCEFFC20BA18F5000734A8 /* HalatFeedsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalatFeedsCellViewModel.swift; sourceTree = "<group>"; };
 		EF5A1945597EF585AFD3DF49 /* Pods-Halaat Updates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halaat Updates.release.xcconfig"; path = "Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates.release.xcconfig"; sourceTree = "<group>"; };
 		F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Halaat_Updates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,6 +91,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E808215620B82F2800EAA667 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E808215720B82F4300EAA667 /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E8775DD820B99A58001282BA /* HalatFeeds */ = {
+			isa = PBXGroup;
+			children = (
+				E8775DDB20B99A95001282BA /* Model */,
+				E8775DDA20B99A90001282BA /* View */,
+				E8775DD920B99A81001282BA /* ViewModel */,
+			);
+			path = HalatFeeds;
+			sourceTree = "<group>";
+		};
+		E8775DD920B99A81001282BA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E8775DDE20B99BA8001282BA /* HalatFeedsViewModel.swift */,
+				E8DCEFFC20BA18F5000734A8 /* HalatFeedsCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E8775DDA20B99A90001282BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8775DDC20B99AB3001282BA /* HalatFeedsViewController.swift */,
+				E8DCEFFA20B9DF43000734A8 /* HalatFeedsTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8775DDB20B99A95001282BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E89A212120B528CA006335B2 = {
 			isa = PBXGroup;
 			children = (
@@ -90,8 +155,13 @@
 		E89A212C20B528CA006335B2 /* Halaat Updates */ = {
 			isa = PBXGroup;
 			children = (
+				E808215620B82F2800EAA667 /* Protocols */,
+				E89A215D20B585B9006335B2 /* Extensions */,
+				E89A215520B53486006335B2 /* SharedResources */,
+				E89A215220B53379006335B2 /* 3rdParties */,
 				E89A214D20B52DAF006335B2 /* Utils */,
 				E89A214120B52BE0006335B2 /* WebManager */,
+				E8775DD820B99A58001282BA /* HalatFeeds */,
 				E89A214320B52C3B006335B2 /* SignIn */,
 				E89A212D20B528CA006335B2 /* AppDelegate.swift */,
 				E89A213120B528CA006335B2 /* Main.storyboard */,
@@ -107,6 +177,7 @@
 			children = (
 				E89A213F20B52B8A006335B2 /* AlamofireManager.swift */,
 				E89A214820B52CA0006335B2 /* WebManager.swift */,
+				E89A215920B5357C006335B2 /* WebRoutes.swift */,
 			);
 			path = WebManager;
 			sourceTree = "<group>";
@@ -152,6 +223,32 @@
 				E89A215020B52E35006335B2 /* DateUtils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E89A215220B53379006335B2 /* 3rdParties */ = {
+			isa = PBXGroup;
+			children = (
+				E89A215320B5338F006335B2 /* Toast.swift */,
+			);
+			path = 3rdParties;
+			sourceTree = "<group>";
+		};
+		E89A215520B53486006335B2 /* SharedResources */ = {
+			isa = PBXGroup;
+			children = (
+				E89A215720B534A7006335B2 /* SharedModel.swift */,
+				E89A216020B585FD006335B2 /* SharedModels.swift */,
+				E89A216220B587DF006335B2 /* Constants.swift */,
+			);
+			path = SharedResources;
+			sourceTree = "<group>";
+		};
+		E89A215D20B585B9006335B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E89A215E20B585CC006335B2 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,11 +330,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,14 +384,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E808215820B82F4300EAA667 /* Protocols.swift in Sources */,
 				E89A214720B52C78006335B2 /* SignInViewModel.swift in Sources */,
+				E8DCEFFB20B9DF43000734A8 /* HalatFeedsTableViewCell.swift in Sources */,
 				E89A215120B52E35006335B2 /* DateUtils.swift in Sources */,
 				E89A213020B528CA006335B2 /* SignInViewController.swift in Sources */,
 				E89A212E20B528CA006335B2 /* AppDelegate.swift in Sources */,
+				E89A215A20B5357C006335B2 /* WebRoutes.swift in Sources */,
+				E89A215820B534A7006335B2 /* SharedModel.swift in Sources */,
 				E89A214F20B52DE1006335B2 /* Utils.swift in Sources */,
+				E89A215F20B585CC006335B2 /* Extensions.swift in Sources */,
+				E8775DDD20B99AB3001282BA /* HalatFeedsViewController.swift in Sources */,
+				E89A216120B585FD006335B2 /* SharedModels.swift in Sources */,
 				E89A214020B52B8A006335B2 /* AlamofireManager.swift in Sources */,
 				E89A214920B52CA0006335B2 /* WebManager.swift in Sources */,
+				E89A216320B587DF006335B2 /* Constants.swift in Sources */,
+				E89A215420B5338F006335B2 /* Toast.swift in Sources */,
 				E89A214B20B52CED006335B2 /* SignInCred.swift in Sources */,
+				E8DCEFFD20BA18F5000734A8 /* HalatFeedsCellViewModel.swift in Sources */,
+				E8775DDF20B99BA8001282BA /* HalatFeedsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

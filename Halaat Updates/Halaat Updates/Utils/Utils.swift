@@ -95,12 +95,15 @@ class Utils {
         view.clipsToBounds = true
     }
     
-//    class func resetSingletons(){
-//        Singleton.sharedInstance.friendsLocations.removeAll()
-//        Singleton.sharedInstance.friendList.removeAll()
-//        Singleton.sharedInstance.friendReuests.removeAll()
-//    }
-//    
+  
+    
+    class func createCardView(view : UIView , backgroundColor : UIColor , borderColor : UIColor , borderWidth : CGFloat ){
+        view.backgroundColor = backgroundColor
+        view.addShadow(color: UIColor.black, opacity: 0.5, shadowRadius: 5)
+        view.layer.borderColor = borderColor.cgColor
+        view.layer.borderWidth = borderWidth
+        
+    }
     class func printlocalDbUrl(){
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         print("LOCAL DB URL : \(urls[urls.count-1] as URL)")
