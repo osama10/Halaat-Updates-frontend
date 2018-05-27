@@ -2,8 +2,8 @@
 //  LoginViewController.swift
 //  Friend Finder
 //
-//  Created by inVenD on 20/03/2018.
-//  Copyright © 2018 inVenD. All rights reserved.
+//  Created by Osama Bin Bashir on 20/03/2018.
+//  Copyright © 2018 Osama Bin Bashir. All rights reserved.
 //
 
 import UIKit
@@ -44,17 +44,6 @@ class SignInViewController: UIViewController , SegueHandlerType  {
             guard let this = self else {return}
             this.view.endEditing(true)
         }
-    }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
     }
     
     @IBAction func didTapOnLogin(sender : UIButton){

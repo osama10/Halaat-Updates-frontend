@@ -2,8 +2,8 @@
 //  HalatFeedsCellViewModel.swift
 //  Halaat Updates
 //
-//  Created by inVenD on 27/05/2018.
-//  Copyright © 2018 freelance. All rights reserved.
+//  Created by Osama Bin Bashir on 27/05/2018.
+//  Copyright © 2018 Osama Bin Bashir. All rights reserved.
 //
 
 import Foundation
@@ -12,19 +12,25 @@ protocol HalatFeedsCellViewModel {
 
     var feed : Update?{get set}
     
-    var setData : ((_ feed : Update)->())?{get set}
+    var setData : (()->())?{get set}
     var setUI : (()->())?{get set}
     var setDefaultImage : ((_ defaulImagetUrl : String)->())?{get set}
     var setImageFromUrl : ((_ imageUrl : URL)->())?{get set}
     
     func viewModelDidBinUI()
-    func setImage(accordingTo imageUrl : String)
+    func setImage()
+    func setTitleOfFeed()->String
+    func setAuthorOfFeed()->String
+    func setDateOnWhichFeedPosted()->String
 }
 
 struct HalatFeedsCellViewModelImp : HalatFeedsCellViewModel {
+   
+    
+   
     var feed: Update?
     
-    var setData: ((Update) -> ())?
+    var setData: (() -> ())?
     var setUI: (() -> ())?
     var setDefaultImage: ((String) -> ())?
     var setImageFromUrl: ((URL) -> ())?
@@ -35,10 +41,23 @@ struct HalatFeedsCellViewModelImp : HalatFeedsCellViewModel {
     
     func viewModelDidBinUI() {
         setUI?()
-        setData?(self.feed!)
+        setData?()
     }
     
-    func setImage(accordingTo imageUrl: String) {
-        (imageUrl == "none") ? setDefaultImage?(imageUrl) : setImageFromUrl?(URL(string: imageUrl)!)
+    func setImage() {
+        let imageUrl = feed?.image ?? "none"
+        (feed?.image == "none") ? setDefaultImage?(imageUrl) : setImageFromUrl?(URL(string: imageUrl)!)
+    }
+    func setTitleOfFeed() -> String {
+        guard let title = feed?.title else {return ""}
+        return title
+    }
+    func setAuthorOfFeed() -> String {
+        guard let authorName = feed?.user?.name else { return "" }
+        return "Posted By : \(authorName)"
+    }
+    func setDateOnWhichFeedPosted() -> String {
+        guard let date = feed?.date else { return "" }
+        return "Date : \(date)"
     }
 }

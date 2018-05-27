@@ -2,8 +2,8 @@
 //  HalatFeedsViewModel.swift
 //  Halaat Updates
 //
-//  Created by inVenD on 26/05/2018.
-//  Copyright © 2018 freelance. All rights reserved.
+//  Created by Osama Bin Bashir on 26/05/2018.
+//  Copyright © 2018 Osama Bin Bashir. All rights reserved.
 //
 
 import Foundation
@@ -19,16 +19,23 @@ protocol HalatFeedsViewModel {
     var success : (()->())?{get set}
     var showLoader : (()->())?{get set}
     var hideLoader : (()->())?{get set}
+    var performSegueToFeedDetails : (()->())?{get set}
+    var performSegueToPostFeedView : (()->())?{get set}
+    var performLogout : (()->())?{get set}
     
     func numberOfRows()->Int
     func heightForRow()->Double
+    func didSelectRow(at index : Int)
     func getAllFeeds()
+    func didTapOnLogoutButton()
     func getHalatFeedsCellViewModel(of index : Int)->HalatFeedsCellViewModel
+    func getFeedDetailViewModel()->FeedDetailViewModel
+    func getPostFeedViewModel()->PostFeedViewModel
 }
 
 class HalatFeedsViewModelImp : HalatFeedsViewModel {
     enum HeightOfRow : Double{
-        case heightOfRow = 300.0
+        case heightOfRow = 350.0
     }
     
     var user: UserModel?
@@ -40,6 +47,11 @@ class HalatFeedsViewModelImp : HalatFeedsViewModel {
     var success : (()->())?
     var showLoader : (()->())?
     var hideLoader : (()->())?
+    var performSegueToFeedDetails: (() -> ())?
+    var performSegueToPostFeedView: (() -> ())?
+    var performLogout: (() -> ())?
+    
+    fileprivate var selectedIndex = -1
     
     init(user : UserModel , webManager : WebManager) {
         self.user = user
@@ -54,7 +66,10 @@ class HalatFeedsViewModelImp : HalatFeedsViewModel {
     func heightForRow() -> Double {
         return HeightOfRow.heightOfRow.rawValue
     }
-    
+    func didSelectRow(at index: Int) {
+        selectedIndex = index
+        performSegueToFeedDetails?()
+    }
     func getAllFeeds() {
         
         webManager?.getAllFeeds(completion: { [weak self](response) in
@@ -77,7 +92,17 @@ class HalatFeedsViewModelImp : HalatFeedsViewModel {
         })
     }
     
+    func didTapOnLogoutButton() {
+        performLogout?()
+    }
     func getHalatFeedsCellViewModel(of index: Int) -> HalatFeedsCellViewModel {
         return HalatFeedsCellViewModelImp(feed: feeds![index])
+    }
+    func getFeedDetailViewModel() -> FeedDetailViewModel {
+        return FeedDetailViewModelImp(feed: feeds![selectedIndex])
+    }
+    
+    func getPostFeedViewModel()->PostFeedViewModel{
+        return PostFeedViewModelImp(user: user!)
     }
 }

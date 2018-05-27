@@ -2,17 +2,23 @@
 //  HalatFeedsViewController.swift
 //  Halaat Updates
 //
-//  Created by inVenD on 26/05/2018.
-//  Copyright © 2018 freelance. All rights reserved.
+//  Created by Osama Bin Bashir on 26/05/2018.
+//  Copyright © 2018 Osama Bin Bashir. All rights reserved.
 //
 
 import UIKit
 
-class HalatFeedsViewController: UIViewController , Injectable {
-    typealias T = HalatFeedsViewModel
-    private var viewModel : HalatFeedsViewModel?
-    @IBOutlet fileprivate weak var tableView : UITableView!
+class HalatFeedsViewController: UIViewController , Injectable , SegueHandlerType{
     
+    enum SegueIdentifier : String {
+        case feed_detailview
+        case post_feedview
+    }
+    
+    typealias T = HalatFeedsViewModel
+    
+    @IBOutlet fileprivate weak var tableView : UITableView!
+    private var viewModel : HalatFeedsViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         assertDependencies()
@@ -20,7 +26,7 @@ class HalatFeedsViewController: UIViewController , Injectable {
         tableView.dataSource = self
         bindUI()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         viewModel?.getAllFeeds()
     }
@@ -32,7 +38,7 @@ class HalatFeedsViewController: UIViewController , Injectable {
     func assertDependencies() {
         assert(viewModel != nil)
     }
-
+    
     func bindUI(){
         viewModel?.showAlert = {[weak self] (title , message) in
             guard let this = self else {return}
@@ -50,6 +56,38 @@ class HalatFeedsViewController: UIViewController , Injectable {
             guard let this = self else {return}
             this.tableView.reloadData()
         }
+        viewModel?.performLogout = {[weak self] in
+            guard let this = self else {return}
+            this.dismiss(animated: true, completion: nil)
+        }
+        viewModel?.performSegueToFeedDetails = {[weak self] in
+            guard let this = self else {return}
+            this.performSegueWithIdentifier(segueIdentifier: .feed_detailview, sender: this)
+        }
+        viewModel?.performSegueToPostFeedView = {[weak self] in
+            guard let this = self else {return}
+            this.performSegueWithIdentifier(segueIdentifier: .post_feedview, sender: this)
+        }
+    }
+    
+    @IBAction func didTapOnLogouButton(_ sender: UIBarButtonItem) {
+        viewModel?.didTapOnLogoutButton()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segueIdentifierForSegue(segue: segue){
+            
+        case .feed_detailview:
+            
+            let destVc = segue.destination as! FeedDetailViewController
+            destVc.inject((viewModel?.getFeedDetailViewModel())!)
+            
+        case .post_feedview:
+           
+            let destVc = segue.destination as! PostFeedViewController
+            destVc.inject((viewModel?.getPostFeedViewModel())!)
+            
+        }
+        
     }
 }
 
@@ -59,11 +97,11 @@ extension HalatFeedsViewController : UITableViewDataSource , UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       
+        
         return tableView.dequeResuseableCell(for: indexPath) as HalatFeedsTableViewCell
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-       
+        
         guard let halatCell = cell as? HalatFeedsTableViewCell else {return}
         halatCell.inject((viewModel?.getHalatFeedsCellViewModel(of: indexPath.row))!)
         halatCell.viewModelDidBind()
@@ -72,5 +110,8 @@ extension HalatFeedsViewController : UITableViewDataSource , UITableViewDelegate
         return CGFloat((viewModel?.heightForRow())!)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel?.didSelectRow(at: indexPath.row)
+    }
     
 }

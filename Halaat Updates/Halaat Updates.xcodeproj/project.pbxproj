@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2A1700B7A9B2631A138AC3CC /* Pods_Halaat_Updates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */; };
+		E8079CE920BAC02B00587500 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079CE820BAC02B00587500 /* FeedDetailViewController.swift */; };
+		E8079CEB20BAC0D600587500 /* FeedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079CEA20BAC0D600587500 /* FeedDetailViewModel.swift */; };
 		E808215820B82F4300EAA667 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E808215720B82F4300EAA667 /* Protocols.swift */; };
 		E8775DDD20B99AB3001282BA /* HalatFeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8775DDC20B99AB3001282BA /* HalatFeedsViewController.swift */; };
 		E8775DDF20B99BA8001282BA /* HalatFeedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8775DDE20B99BA8001282BA /* HalatFeedsViewModel.swift */; };
@@ -28,12 +30,16 @@
 		E89A215F20B585CC006335B2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215E20B585CC006335B2 /* Extensions.swift */; };
 		E89A216120B585FD006335B2 /* SharedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A216020B585FD006335B2 /* SharedModels.swift */; };
 		E89A216320B587DF006335B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A216220B587DF006335B2 /* Constants.swift */; };
+		E8D3FF6620BADDA000398F5B /* PostFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF6520BADDA000398F5B /* PostFeedViewController.swift */; };
+		E8D3FF6820BADDAD00398F5B /* PostFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF6720BADDAD00398F5B /* PostFeedViewModel.swift */; };
 		E8DCEFFB20B9DF43000734A8 /* HalatFeedsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DCEFFA20B9DF43000734A8 /* HalatFeedsTableViewCell.swift */; };
 		E8DCEFFD20BA18F5000734A8 /* HalatFeedsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DCEFFC20BA18F5000734A8 /* HalatFeedsCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DBBA209102DEF1F61A5B8714 /* Pods-Halaat Updates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halaat Updates.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates.debug.xcconfig"; sourceTree = "<group>"; };
+		E8079CE820BAC02B00587500 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
+		E8079CEA20BAC0D600587500 /* FeedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewModel.swift; sourceTree = "<group>"; };
 		E808215720B82F4300EAA667 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		E8775DDC20B99AB3001282BA /* HalatFeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalatFeedsViewController.swift; sourceTree = "<group>"; };
 		E8775DDE20B99BA8001282BA /* HalatFeedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalatFeedsViewModel.swift; sourceTree = "<group>"; };
@@ -56,6 +62,8 @@
 		E89A215E20B585CC006335B2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E89A216020B585FD006335B2 /* SharedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModels.swift; sourceTree = "<group>"; };
 		E89A216220B587DF006335B2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E8D3FF6520BADDA000398F5B /* PostFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedViewController.swift; sourceTree = "<group>"; };
+		E8D3FF6720BADDAD00398F5B /* PostFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedViewModel.swift; sourceTree = "<group>"; };
 		E8DCEFFA20B9DF43000734A8 /* HalatFeedsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalatFeedsTableViewCell.swift; sourceTree = "<group>"; };
 		E8DCEFFC20BA18F5000734A8 /* HalatFeedsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalatFeedsCellViewModel.swift; sourceTree = "<group>"; };
 		EF5A1945597EF585AFD3DF49 /* Pods-Halaat Updates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halaat Updates.release.xcconfig"; path = "Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +97,39 @@
 				F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8079CE420BABFD100587500 /* FeedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E8079CE720BAC00100587500 /* Model */,
+				E8079CE620BABFFB00587500 /* View */,
+				E8079CE520BABFF200587500 /* ViewModel */,
+			);
+			path = FeedDetail;
+			sourceTree = "<group>";
+		};
+		E8079CE520BABFF200587500 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E8079CEA20BAC0D600587500 /* FeedDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E8079CE620BABFFB00587500 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8079CE820BAC02B00587500 /* FeedDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8079CE720BAC00100587500 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E808215620B82F2800EAA667 /* Protocols */ = {
@@ -161,8 +202,10 @@
 				E89A215220B53379006335B2 /* 3rdParties */,
 				E89A214D20B52DAF006335B2 /* Utils */,
 				E89A214120B52BE0006335B2 /* WebManager */,
-				E8775DD820B99A58001282BA /* HalatFeeds */,
 				E89A214320B52C3B006335B2 /* SignIn */,
+				E8775DD820B99A58001282BA /* HalatFeeds */,
+				E8079CE420BABFD100587500 /* FeedDetail */,
+				E8D3FF6120BADD6700398F5B /* PostFeed */,
 				E89A212D20B528CA006335B2 /* AppDelegate.swift */,
 				E89A213120B528CA006335B2 /* Main.storyboard */,
 				E89A213420B528CA006335B2 /* Assets.xcassets */,
@@ -249,6 +292,39 @@
 				E89A215E20B585CC006335B2 /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E8D3FF6120BADD6700398F5B /* PostFeed */ = {
+			isa = PBXGroup;
+			children = (
+				E8D3FF6420BADD8B00398F5B /* Model */,
+				E8D3FF6320BADD8700398F5B /* View */,
+				E8D3FF6220BADD7F00398F5B /* ViewModel */,
+			);
+			path = PostFeed;
+			sourceTree = "<group>";
+		};
+		E8D3FF6220BADD7F00398F5B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E8D3FF6720BADDAD00398F5B /* PostFeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E8D3FF6320BADD8700398F5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8D3FF6520BADDA000398F5B /* PostFeedViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8D3FF6420BADD8B00398F5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,8 +466,11 @@
 				E89A215120B52E35006335B2 /* DateUtils.swift in Sources */,
 				E89A213020B528CA006335B2 /* SignInViewController.swift in Sources */,
 				E89A212E20B528CA006335B2 /* AppDelegate.swift in Sources */,
+				E8D3FF6620BADDA000398F5B /* PostFeedViewController.swift in Sources */,
 				E89A215A20B5357C006335B2 /* WebRoutes.swift in Sources */,
+				E8D3FF6820BADDAD00398F5B /* PostFeedViewModel.swift in Sources */,
 				E89A215820B534A7006335B2 /* SharedModel.swift in Sources */,
+				E8079CEB20BAC0D600587500 /* FeedDetailViewModel.swift in Sources */,
 				E89A214F20B52DE1006335B2 /* Utils.swift in Sources */,
 				E89A215F20B585CC006335B2 /* Extensions.swift in Sources */,
 				E8775DDD20B99AB3001282BA /* HalatFeedsViewController.swift in Sources */,
@@ -403,6 +482,7 @@
 				E89A214B20B52CED006335B2 /* SignInCred.swift in Sources */,
 				E8DCEFFD20BA18F5000734A8 /* HalatFeedsCellViewModel.swift in Sources */,
 				E8775DDF20B99BA8001282BA /* HalatFeedsViewModel.swift in Sources */,
+				E8079CE920BAC02B00587500 /* FeedDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

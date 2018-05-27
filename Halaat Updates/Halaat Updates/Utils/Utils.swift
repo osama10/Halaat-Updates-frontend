@@ -2,8 +2,8 @@
 //  Utils.swift
 //  Gutso
 //
-//  Created by inVenD on 16/12/2017.
-//  Copyright © 2017 inVenD. All rights reserved.
+//  Created by Osama Bin Bashir on 16/12/2017.
+//  Copyright © 2017 Osama Bin Bashir. All rights reserved.
 //
 
 import Foundation

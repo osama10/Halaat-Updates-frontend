@@ -2,8 +2,8 @@
 //  SharedModels.swift
 //  Halaat Updates
 //
-//  Created by inVenD on 23/05/2018.
-//  Copyright © 2018 freelance. All rights reserved.
+//  Created by Osama Bin Bashir on 23/05/2018.
+//  Copyright © 2018 Osama Bin Bashir. All rights reserved.
 //
 
 import Foundation
@@ -25,7 +25,6 @@ struct UserModel : Mappable{
     var email : String?
     var password : String?
     var occupation : String?
-    var updates : [Update]?
     
     init?(map: Map) {
         
@@ -37,7 +36,6 @@ struct UserModel : Mappable{
         email <- map[UserModelKeys.email.rawValue]
         password <- map[UserModelKeys.password.rawValue]
         occupation <- map[UserModelKeys.occupation.rawValue]
-        updates <- map[UserModelKeys.updates.rawValue]
     }
 }
 
@@ -50,6 +48,7 @@ struct Update : Mappable {
         case description = "description"
         case image = "image"
         case date = "date"
+        case user = "user"
     }
     
     var id : Int?
@@ -58,6 +57,7 @@ struct Update : Mappable {
     var description : String?
     var image : String?
     var date : String?
+    var user : UserModel?
     
     init?(map: Map) {
         
@@ -70,5 +70,6 @@ struct Update : Mappable {
         description <- map[UpdateKeys.description.rawValue]
         image <- map[UpdateKeys.image.rawValue]
         date <- map[UpdateKeys.date.rawValue]
+        user <- map[UpdateKeys.user.rawValue]
     }
 }

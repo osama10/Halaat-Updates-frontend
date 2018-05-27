@@ -2,8 +2,8 @@
 //  DateUtils.swift
 //  Friend Finder
 //
-//  Created by inVenD on 21/03/2018.
-//  Copyright © 2018 inVenD. All rights reserved.
+//  Created by Osama Bin Bashir on 21/03/2018.
+//  Copyright © 2018 Osama Bin Bashir. All rights reserved.
 //
 
 import Foundation
