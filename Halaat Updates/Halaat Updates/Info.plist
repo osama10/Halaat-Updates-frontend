@@ -45,5 +45,10 @@
     <dict>
         <key>NSAllowsArbitraryLoads</key><true/>
     </dict>
+    <key>NSCameraUsageDescription</key>
+    <string>We need to access camera for geting your profile picture</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need to access gallery for geting your profile picture</string>
+
 </dict>
 </plist>

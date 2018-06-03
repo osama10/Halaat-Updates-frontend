@@ -270,11 +270,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" secondItem="SUf-ki-lXv" secondAttribute="width" multiplier="1:1" id="rie-5N-RjJ"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="didTapOnEditTitleButton:" destination="HSI-37-cpC" eventType="touchUpInside" id="Z5k-gi-BTB"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pIR-QJ-xyN">
                                 <rect key="frame" x="0.0" y="364" width="375" height="303"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -289,6 +291,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" secondItem="Vf0-KS-86D" secondAttribute="width" multiplier="1:1" id="znu-7j-kt2"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="didTapOnEditDescriptionButton:" destination="HSI-37-cpC" eventType="touchUpInside" id="lIZ-QR-XMF"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit" translatesAutoresizingMaskIntoConstraints="NO" id="GyI-hd-3NV">
                                 <rect key="frame" x="340.5" y="329.5" width="20" height="20"/>
@@ -343,6 +348,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTitleLabel" destination="fhb-bM-7jL" id="fx5-RA-uF3"/>
+                        <outlet property="descriptonTextView" destination="pIR-QJ-xyN" id="AXh-q3-FIc"/>
+                        <outlet property="postImageView" destination="arR-OY-BGd" id="Qqb-qA-CbO"/>
+                        <outlet property="titleTextField" destination="Fn3-me-TfL" id="op8-io-iRi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wMM-z7-s4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

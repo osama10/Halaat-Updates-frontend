@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2A1700B7A9B2631A138AC3CC /* Pods_Halaat_Updates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */; };
+		E805E4C320C449CC0060A424 /* ImagePickertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E805E4C220C449CC0060A424 /* ImagePickertUtils.swift */; };
+		E805E4C520C45C950060A424 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E805E4C420C45C950060A424 /* PostModel.swift */; };
 		E8079CE920BAC02B00587500 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079CE820BAC02B00587500 /* FeedDetailViewController.swift */; };
 		E8079CEB20BAC0D600587500 /* FeedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079CEA20BAC0D600587500 /* FeedDetailViewModel.swift */; };
 		E808215820B82F4300EAA667 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E808215720B82F4300EAA667 /* Protocols.swift */; };
@@ -71,6 +73,8 @@
 
 /* Begin PBXFileReference section */
 		DBBA209102DEF1F61A5B8714 /* Pods-Halaat Updates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halaat Updates.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates.debug.xcconfig"; sourceTree = "<group>"; };
+		E805E4C220C449CC0060A424 /* ImagePickertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickertUtils.swift; sourceTree = "<group>"; };
+		E805E4C420C45C950060A424 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		E8079CE820BAC02B00587500 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
 		E8079CEA20BAC0D600587500 /* FeedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewModel.swift; sourceTree = "<group>"; };
 		E808215720B82F4300EAA667 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -314,6 +318,7 @@
 			children = (
 				E89A214E20B52DE1006335B2 /* Utils.swift */,
 				E89A215020B52E35006335B2 /* DateUtils.swift */,
+				E805E4C220C449CC0060A424 /* ImagePickertUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -372,6 +377,7 @@
 		E8D3FF6420BADD8B00398F5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E805E4C420C45C950060A424 /* PostModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -638,6 +644,7 @@
 				E89A215120B52E35006335B2 /* DateUtils.swift in Sources */,
 				E8D3FF7120BBCFF600398F5B /* SignUpViewController.swift in Sources */,
 				E89A213020B528CA006335B2 /* SignInViewController.swift in Sources */,
+				E805E4C320C449CC0060A424 /* ImagePickertUtils.swift in Sources */,
 				E89A212E20B528CA006335B2 /* AppDelegate.swift in Sources */,
 				E8D3FF6620BADDA000398F5B /* PostFeedViewController.swift in Sources */,
 				E8D3FF6F20BBCF8300398F5B /* SignupModels.swift in Sources */,
@@ -648,6 +655,7 @@
 				E89A215F20B585CC006335B2 /* Extensions.swift in Sources */,
 				E8775DDD20B99AB3001282BA /* HalatFeedsViewController.swift in Sources */,
 				E89A216120B585FD006335B2 /* SharedModels.swift in Sources */,
+				E805E4C520C45C950060A424 /* PostModel.swift in Sources */,
 				E89A214020B52B8A006335B2 /* AlamofireManager.swift in Sources */,
 				E89A214920B52CA0006335B2 /* WebManager.swift in Sources */,
 				E89A216320B587DF006335B2 /* Constants.swift in Sources */,
