@@ -25,15 +25,48 @@
 		E89A214F20B52DE1006335B2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A214E20B52DE1006335B2 /* Utils.swift */; };
 		E89A215120B52E35006335B2 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215020B52E35006335B2 /* DateUtils.swift */; };
 		E89A215420B5338F006335B2 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215320B5338F006335B2 /* Toast.swift */; };
-		E89A215820B534A7006335B2 /* SharedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215720B534A7006335B2 /* SharedModel.swift */; };
 		E89A215A20B5357C006335B2 /* WebRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215920B5357C006335B2 /* WebRoutes.swift */; };
 		E89A215F20B585CC006335B2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215E20B585CC006335B2 /* Extensions.swift */; };
 		E89A216120B585FD006335B2 /* SharedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A216020B585FD006335B2 /* SharedModels.swift */; };
 		E89A216320B587DF006335B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A216220B587DF006335B2 /* Constants.swift */; };
 		E8D3FF6620BADDA000398F5B /* PostFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF6520BADDA000398F5B /* PostFeedViewController.swift */; };
 		E8D3FF6820BADDAD00398F5B /* PostFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF6720BADDAD00398F5B /* PostFeedViewModel.swift */; };
+		E8D3FF6F20BBCF8300398F5B /* SignupModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF6E20BBCF8300398F5B /* SignupModels.swift */; };
+		E8D3FF7120BBCFF600398F5B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF7020BBCFF600398F5B /* SignUpViewController.swift */; };
+		E8D3FF7320BBD01A00398F5B /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF7220BBD01A00398F5B /* SignupViewModel.swift */; };
 		E8DCEFFB20B9DF43000734A8 /* HalatFeedsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DCEFFA20B9DF43000734A8 /* HalatFeedsTableViewCell.swift */; };
 		E8DCEFFD20BA18F5000734A8 /* HalatFeedsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DCEFFC20BA18F5000734A8 /* HalatFeedsCellViewModel.swift */; };
+		E8FE924920BBD3C900C240A3 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FE924820BBD3C900C240A3 /* Models.swift */; };
+		E8FE924D20BBF6F200C240A3 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E808215720B82F4300EAA667 /* Protocols.swift */; };
+		E8FE924E20BBF6F200C240A3 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A214620B52C77006335B2 /* SignInViewModel.swift */; };
+		E8FE924F20BBF6F200C240A3 /* HalatFeedsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DCEFFA20B9DF43000734A8 /* HalatFeedsTableViewCell.swift */; };
+		E8FE925020BBF6F200C240A3 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215020B52E35006335B2 /* DateUtils.swift */; };
+		E8FE925120BBF6F200C240A3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF7020BBCFF600398F5B /* SignUpViewController.swift */; };
+		E8FE925220BBF6F200C240A3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A212F20B528CA006335B2 /* SignInViewController.swift */; };
+		E8FE925320BBF6F200C240A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A212D20B528CA006335B2 /* AppDelegate.swift */; };
+		E8FE925420BBF6F200C240A3 /* PostFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF6520BADDA000398F5B /* PostFeedViewController.swift */; };
+		E8FE925520BBF6F200C240A3 /* SignupModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF6E20BBCF8300398F5B /* SignupModels.swift */; };
+		E8FE925620BBF6F200C240A3 /* WebRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215920B5357C006335B2 /* WebRoutes.swift */; };
+		E8FE925720BBF6F200C240A3 /* PostFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF6720BADDAD00398F5B /* PostFeedViewModel.swift */; };
+		E8FE925820BBF6F200C240A3 /* FeedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079CEA20BAC0D600587500 /* FeedDetailViewModel.swift */; };
+		E8FE925920BBF6F200C240A3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A214E20B52DE1006335B2 /* Utils.swift */; };
+		E8FE925A20BBF6F200C240A3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215E20B585CC006335B2 /* Extensions.swift */; };
+		E8FE925B20BBF6F200C240A3 /* HalatFeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8775DDC20B99AB3001282BA /* HalatFeedsViewController.swift */; };
+		E8FE925C20BBF6F200C240A3 /* SharedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A216020B585FD006335B2 /* SharedModels.swift */; };
+		E8FE925D20BBF6F200C240A3 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A213F20B52B8A006335B2 /* AlamofireManager.swift */; };
+		E8FE925E20BBF6F200C240A3 /* WebManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A214820B52CA0006335B2 /* WebManager.swift */; };
+		E8FE925F20BBF6F200C240A3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A216220B587DF006335B2 /* Constants.swift */; };
+		E8FE926020BBF6F200C240A3 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF7220BBD01A00398F5B /* SignupViewModel.swift */; };
+		E8FE926120BBF6F200C240A3 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215320B5338F006335B2 /* Toast.swift */; };
+		E8FE926220BBF6F200C240A3 /* SignInCred.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A214A20B52CED006335B2 /* SignInCred.swift */; };
+		E8FE926320BBF6F200C240A3 /* HalatFeedsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DCEFFC20BA18F5000734A8 /* HalatFeedsCellViewModel.swift */; };
+		E8FE926420BBF6F200C240A3 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FE924820BBD3C900C240A3 /* Models.swift */; };
+		E8FE926520BBF6F200C240A3 /* HalatFeedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8775DDE20B99BA8001282BA /* HalatFeedsViewModel.swift */; };
+		E8FE926620BBF6F200C240A3 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079CE820BAC02B00587500 /* FeedDetailViewController.swift */; };
+		E8FE926820BBF6F200C240A3 /* Pods_Halaat_Updates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */; };
+		E8FE926A20BBF6F200C240A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89A213620B528CA006335B2 /* LaunchScreen.storyboard */; };
+		E8FE926B20BBF6F200C240A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E89A213420B528CA006335B2 /* Assets.xcassets */; };
+		E8FE926C20BBF6F200C240A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89A213120B528CA006335B2 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,15 +90,20 @@
 		E89A214E20B52DE1006335B2 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E89A215020B52E35006335B2 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		E89A215320B5338F006335B2 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
-		E89A215720B534A7006335B2 /* SharedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModel.swift; sourceTree = "<group>"; };
 		E89A215920B5357C006335B2 /* WebRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRoutes.swift; sourceTree = "<group>"; };
 		E89A215E20B585CC006335B2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E89A216020B585FD006335B2 /* SharedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModels.swift; sourceTree = "<group>"; };
 		E89A216220B587DF006335B2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E8D3FF6520BADDA000398F5B /* PostFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedViewController.swift; sourceTree = "<group>"; };
 		E8D3FF6720BADDAD00398F5B /* PostFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedViewModel.swift; sourceTree = "<group>"; };
+		E8D3FF6E20BBCF8300398F5B /* SignupModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModels.swift; sourceTree = "<group>"; };
+		E8D3FF7020BBCFF600398F5B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E8D3FF7220BBD01A00398F5B /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		E8DCEFFA20B9DF43000734A8 /* HalatFeedsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalatFeedsTableViewCell.swift; sourceTree = "<group>"; };
 		E8DCEFFC20BA18F5000734A8 /* HalatFeedsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalatFeedsCellViewModel.swift; sourceTree = "<group>"; };
+		E8FE924820BBD3C900C240A3 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		E8FE927220BBF6F200C240A3 /* Halaat Updates copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halaat Updates copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8FE927320BBF6F200C240A3 /* Halaat Updates copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Halaat Updates copy-Info.plist"; path = "/Users/venturedive/Halaat-Updates-frontend-/Halaat Updates/Halaat Updates copy-Info.plist"; sourceTree = "<absolute>"; };
 		EF5A1945597EF585AFD3DF49 /* Pods-Halaat Updates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halaat Updates.release.xcconfig"; path = "Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates.release.xcconfig"; sourceTree = "<group>"; };
 		F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Halaat_Updates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -76,6 +114,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1700B7A9B2631A138AC3CC /* Pods_Halaat_Updates.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8FE926720BBF6F200C240A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8FE926820BBF6F200C240A3 /* Pods_Halaat_Updates.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +228,7 @@
 				E89A212B20B528CA006335B2 /* Products */,
 				65BA1E8624AEA7BBB6051BE1 /* Pods */,
 				DB9F571B5AA4BA19FE69714B /* Frameworks */,
+				E8FE927320BBF6F200C240A3 /* Halaat Updates copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				E89A212A20B528CA006335B2 /* Halaat Updates.app */,
+				E8FE927220BBF6F200C240A3 /* Halaat Updates copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,6 +251,7 @@
 				E89A214D20B52DAF006335B2 /* Utils */,
 				E89A214120B52BE0006335B2 /* WebManager */,
 				E89A214320B52C3B006335B2 /* SignIn */,
+				E8D3FF6A20BBCED100398F5B /* SignUp */,
 				E8775DD820B99A58001282BA /* HalatFeeds */,
 				E8079CE420BABFD100587500 /* FeedDetail */,
 				E8D3FF6120BADD6700398F5B /* PostFeed */,
@@ -221,6 +270,7 @@
 				E89A213F20B52B8A006335B2 /* AlamofireManager.swift */,
 				E89A214820B52CA0006335B2 /* WebManager.swift */,
 				E89A215920B5357C006335B2 /* WebRoutes.swift */,
+				E8FE924820BBD3C900C240A3 /* Models.swift */,
 			);
 			path = WebManager;
 			sourceTree = "<group>";
@@ -279,7 +329,6 @@
 		E89A215520B53486006335B2 /* SharedResources */ = {
 			isa = PBXGroup;
 			children = (
-				E89A215720B534A7006335B2 /* SharedModel.swift */,
 				E89A216020B585FD006335B2 /* SharedModels.swift */,
 				E89A216220B587DF006335B2 /* Constants.swift */,
 			);
@@ -327,6 +376,40 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E8D3FF6A20BBCED100398F5B /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				E8D3FF6D20BBCF3D00398F5B /* Model */,
+				E8D3FF6C20BBCF3700398F5B /* View */,
+				E8D3FF6B20BBCF2F00398F5B /* ViewModel */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		E8D3FF6B20BBCF2F00398F5B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E8D3FF7220BBD01A00398F5B /* SignupViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E8D3FF6C20BBCF3700398F5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8D3FF7020BBCFF600398F5B /* SignUpViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8D3FF6D20BBCF3D00398F5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8D3FF6E20BBCF8300398F5B /* SignupModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,6 +433,26 @@
 			productReference = E89A212A20B528CA006335B2 /* Halaat Updates.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E8FE924A20BBF6F200C240A3 /* Halaat Updates copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8FE926F20BBF6F200C240A3 /* Build configuration list for PBXNativeTarget "Halaat Updates copy" */;
+			buildPhases = (
+				E8FE924B20BBF6F200C240A3 /* [CP] Check Pods Manifest.lock */,
+				E8FE924C20BBF6F200C240A3 /* Sources */,
+				E8FE926720BBF6F200C240A3 /* Frameworks */,
+				E8FE926920BBF6F200C240A3 /* Resources */,
+				E8FE926D20BBF6F200C240A3 /* [CP] Embed Pods Frameworks */,
+				E8FE926E20BBF6F200C240A3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Halaat Updates copy";
+			productName = "Halaat Updates";
+			productReference = E8FE927220BBF6F200C240A3 /* Halaat Updates copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -362,6 +465,9 @@
 				TargetAttributes = {
 					E89A212920B528CA006335B2 = {
 						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					E8FE924A20BBF6F200C240A3 = {
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -380,6 +486,7 @@
 			projectRoot = "";
 			targets = (
 				E89A212920B528CA006335B2 /* Halaat Updates */,
+				E8FE924A20BBF6F200C240A3 /* Halaat Updates copy */,
 			);
 		};
 /* End PBXProject section */
@@ -392,6 +499,16 @@
 				E89A213820B528CA006335B2 /* LaunchScreen.storyboard in Resources */,
 				E89A213520B528CA006335B2 /* Assets.xcassets in Resources */,
 				E89A213320B528CA006335B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8FE926920BBF6F200C240A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8FE926A20BBF6F200C240A3 /* LaunchScreen.storyboard in Resources */,
+				E8FE926B20BBF6F200C240A3 /* Assets.xcassets in Resources */,
+				E8FE926C20BBF6F200C240A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +570,61 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E8FE924B20BBF6F200C240A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Halaat Updates-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8FE926D20BBF6F200C240A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8FE926E20BBF6F200C240A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -464,12 +636,13 @@
 				E89A214720B52C78006335B2 /* SignInViewModel.swift in Sources */,
 				E8DCEFFB20B9DF43000734A8 /* HalatFeedsTableViewCell.swift in Sources */,
 				E89A215120B52E35006335B2 /* DateUtils.swift in Sources */,
+				E8D3FF7120BBCFF600398F5B /* SignUpViewController.swift in Sources */,
 				E89A213020B528CA006335B2 /* SignInViewController.swift in Sources */,
 				E89A212E20B528CA006335B2 /* AppDelegate.swift in Sources */,
 				E8D3FF6620BADDA000398F5B /* PostFeedViewController.swift in Sources */,
+				E8D3FF6F20BBCF8300398F5B /* SignupModels.swift in Sources */,
 				E89A215A20B5357C006335B2 /* WebRoutes.swift in Sources */,
 				E8D3FF6820BADDAD00398F5B /* PostFeedViewModel.swift in Sources */,
-				E89A215820B534A7006335B2 /* SharedModel.swift in Sources */,
 				E8079CEB20BAC0D600587500 /* FeedDetailViewModel.swift in Sources */,
 				E89A214F20B52DE1006335B2 /* Utils.swift in Sources */,
 				E89A215F20B585CC006335B2 /* Extensions.swift in Sources */,
@@ -478,11 +651,46 @@
 				E89A214020B52B8A006335B2 /* AlamofireManager.swift in Sources */,
 				E89A214920B52CA0006335B2 /* WebManager.swift in Sources */,
 				E89A216320B587DF006335B2 /* Constants.swift in Sources */,
+				E8D3FF7320BBD01A00398F5B /* SignupViewModel.swift in Sources */,
 				E89A215420B5338F006335B2 /* Toast.swift in Sources */,
 				E89A214B20B52CED006335B2 /* SignInCred.swift in Sources */,
 				E8DCEFFD20BA18F5000734A8 /* HalatFeedsCellViewModel.swift in Sources */,
+				E8FE924920BBD3C900C240A3 /* Models.swift in Sources */,
 				E8775DDF20B99BA8001282BA /* HalatFeedsViewModel.swift in Sources */,
 				E8079CE920BAC02B00587500 /* FeedDetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8FE924C20BBF6F200C240A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8FE924D20BBF6F200C240A3 /* Protocols.swift in Sources */,
+				E8FE924E20BBF6F200C240A3 /* SignInViewModel.swift in Sources */,
+				E8FE924F20BBF6F200C240A3 /* HalatFeedsTableViewCell.swift in Sources */,
+				E8FE925020BBF6F200C240A3 /* DateUtils.swift in Sources */,
+				E8FE925120BBF6F200C240A3 /* SignUpViewController.swift in Sources */,
+				E8FE925220BBF6F200C240A3 /* SignInViewController.swift in Sources */,
+				E8FE925320BBF6F200C240A3 /* AppDelegate.swift in Sources */,
+				E8FE925420BBF6F200C240A3 /* PostFeedViewController.swift in Sources */,
+				E8FE925520BBF6F200C240A3 /* SignupModels.swift in Sources */,
+				E8FE925620BBF6F200C240A3 /* WebRoutes.swift in Sources */,
+				E8FE925720BBF6F200C240A3 /* PostFeedViewModel.swift in Sources */,
+				E8FE925820BBF6F200C240A3 /* FeedDetailViewModel.swift in Sources */,
+				E8FE925920BBF6F200C240A3 /* Utils.swift in Sources */,
+				E8FE925A20BBF6F200C240A3 /* Extensions.swift in Sources */,
+				E8FE925B20BBF6F200C240A3 /* HalatFeedsViewController.swift in Sources */,
+				E8FE925C20BBF6F200C240A3 /* SharedModels.swift in Sources */,
+				E8FE925D20BBF6F200C240A3 /* AlamofireManager.swift in Sources */,
+				E8FE925E20BBF6F200C240A3 /* WebManager.swift in Sources */,
+				E8FE925F20BBF6F200C240A3 /* Constants.swift in Sources */,
+				E8FE926020BBF6F200C240A3 /* SignupViewModel.swift in Sources */,
+				E8FE926120BBF6F200C240A3 /* Toast.swift in Sources */,
+				E8FE926220BBF6F200C240A3 /* SignInCred.swift in Sources */,
+				E8FE926320BBF6F200C240A3 /* HalatFeedsCellViewModel.swift in Sources */,
+				E8FE926420BBF6F200C240A3 /* Models.swift in Sources */,
+				E8FE926520BBF6F200C240A3 /* HalatFeedsViewModel.swift in Sources */,
+				E8FE926620BBF6F200C240A3 /* FeedDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +853,36 @@
 			};
 			name = Release;
 		};
+		E8FE927020BBF6F200C240A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBBA209102DEF1F61A5B8714 /* Pods-Halaat Updates.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Halaat Updates copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "game.Halaat-Updates";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E8FE927120BBF6F200C240A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF5A1945597EF585AFD3DF49 /* Pods-Halaat Updates.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Halaat Updates copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "game.Halaat-Updates";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -662,6 +900,15 @@
 			buildConfigurations = (
 				E89A213D20B528CA006335B2 /* Debug */,
 				E89A213E20B528CA006335B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8FE926F20BBF6F200C240A3 /* Build configuration list for PBXNativeTarget "Halaat Updates copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8FE927020BBF6F200C240A3 /* Debug */,
+				E8FE927120BBF6F200C240A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -25,7 +25,7 @@ protocol SignInViewModel {
     func didTapOnLogin(email : String , password : String)
     func didReturnPressed()
     func getHalatFeedsViewModel(user : UserModel)->HalatFeedsViewModel
-    
+    func getSignupViewModel()->SignupViewModel
 }
 
 
@@ -63,6 +63,10 @@ class SignInViewModelImp : SignInViewModel{
         return HalatFeedsViewModelImp(user: user , webManager : webManager)
     }
     
+    func getSignupViewModel()->SignupViewModel{
+        return SignupViewModelImp(webManager: webManager)
+    }
+
     fileprivate func login(credentials : SignInCred){
         
         showLoader?()
@@ -74,16 +78,28 @@ class SignInViewModelImp : SignInViewModel{
             if(response.responseCode == 0){
                 this.showAlert?("Login Failed" , response.response["response"] as? String ?? "There is something wrong. Please try later.")
             }else{
+                let responseCode = (response.response["response"] as! [String : AnyObject])["statusCode"] as! Int
+                if(responseCode == 201){
                 let responseBody = (response.response["response"] as! [String : AnyObject])["responseBody"] as! [String : AnyObject]
+               
                 let userDict = responseBody["Data"] as! [String  : AnyObject]
+               
                 guard let user = Mapper<UserModel>().map(JSON: userDict) else {
                      this.showAlert?("Login Failed" , "There is something wrong. Please try later.")
                     return
                 }
+               
                 this.user = user
                 this.success?()
             }
-            
+                else{
+                    let responseBody = (response.response["response"] as! [String : AnyObject])["responseBody"] as! [String : AnyObject]
+                    
+                    let errorMessage = responseBody["Data"] as! String
+                    
+                    this.showAlert?("Login Failed" , errorMessage)
+                }
+            }
         }
     }
 }

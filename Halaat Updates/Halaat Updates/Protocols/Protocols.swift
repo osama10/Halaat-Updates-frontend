@@ -16,7 +16,31 @@ extension ReusableView where Self : UITableViewCell {
         return String(describing: self).components(separatedBy: ".").last!
     }
 }
+protocol AlertsPresentable : class {}
 
+extension AlertsPresentable where Self : UIViewController {
+    
+    func showAlert(with title: String? = nil , and message: String? = nil){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    func showPermissionAlert(title : String , message : String , actionButtonTitle : String , completion :  @escaping () -> Void){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: actionButtonTitle , style: .default, handler: {
+            alert -> Void in
+            
+            completion()
+        })
+        
+        alertController.addAction(saveAction)
+        present(alertController, animated: true, completion: nil)
+    }
+}
 protocol NibLoadableView : class { static var nibName : String {get} }
 
 extension NibLoadableView where Self : UIView {
@@ -43,6 +67,7 @@ extension SegueHandlerType where Self: UIViewController,
         guard let identifier = segue.identifier, let segueIdentifier = SegueIdentifier(rawValue: identifier) else {fatalError("Invalid segue identifier \(String(describing: segue.identifier)).") }
         
         return segueIdentifier
+        
     }
 }
 

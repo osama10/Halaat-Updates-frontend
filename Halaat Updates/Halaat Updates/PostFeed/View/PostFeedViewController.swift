@@ -9,7 +9,6 @@
 import UIKit
 
 class PostFeedViewController: UIViewController , Injectable {
-    typealias T = PostFeedViewModel
     private var viewModel : PostFeedViewModel!
     
     override func viewDidLoad() {

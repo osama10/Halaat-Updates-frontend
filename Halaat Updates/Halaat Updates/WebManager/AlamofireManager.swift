@@ -10,10 +10,10 @@ import Foundation
 import Alamofire
 
 class AlamofireManager{
-    func makeRequest(_ url: String , method: HTTPMethod = .post, params: [String : AnyObject]? = nil, headers: [String : String]? = nil,  success:@escaping (Any) -> Void, failure:@escaping (Error) -> Void){
+    func makeRequest(request : Request,  success:@escaping (Any) -> Void, failure:@escaping (Error) -> Void){
         
         
-        Alamofire.request(url, method: method, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { (responseObject) -> Void in
+        Alamofire.request(request.url, method: request.httpMethod, parameters: request.params, encoding: JSONEncoding.default, headers: request.headers).responseJSON { (responseObject) -> Void in
             if responseObject.result.isSuccess {
                 if let resJson = responseObject.result.value as? NSDictionary{
                     success(resJson)

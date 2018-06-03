@@ -8,9 +8,10 @@
 
 import UIKit
 
-class SignInViewController: UIViewController , SegueHandlerType  {
+class SignInViewController: UIViewController , SegueHandlerType , AlertsPresentable  {
     enum SegueIdentifier  : String {
         case mainview
+        case signupview
     }
     
     @IBOutlet fileprivate weak var tfEmail : UITextField!
@@ -26,7 +27,7 @@ class SignInViewController: UIViewController , SegueHandlerType  {
     private func bindUI(){
         viewModel.showAlert = {[weak self] (title , message) in
             guard let this = self else {return}
-            this.showAlertControllerWithOkTitle(title: title, message: message)
+            this.showAlert(with: title, and: message)
         }
         viewModel.showLoader = { [weak self] in
             guard let this = self else {return}
@@ -50,17 +51,22 @@ class SignInViewController: UIViewController , SegueHandlerType  {
         viewModel.didTapOnLogin(email: tfEmail.text!, password: tfPassword.text!)
     }
     
+    
+    
     @IBAction func returnPressed(sender: UITextField) {
         viewModel.didReturnPressed()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let identifier = segueIdentifierForSegue(segue: segue)
-        if(identifier == .mainview){
+        switch segueIdentifierForSegue(segue: segue){
+       
+        case .mainview :
             let destVC = (segue.destination as! UINavigationController).viewControllers.first as! HalatFeedsViewController
-            
             destVC.inject(viewModel.getHalatFeedsViewModel(user: viewModel.user!))
-        }
+        case .signupview:
+            let destVc = segue.destination as! SignUpViewController
+            destVc.inject(viewModel.getSignupViewModel())
         
+        }
     }
 }

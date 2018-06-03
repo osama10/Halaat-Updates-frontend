@@ -8,14 +8,12 @@
 
 import UIKit
 
-class HalatFeedsViewController: UIViewController , Injectable , SegueHandlerType{
+class HalatFeedsViewController: UIViewController , Injectable , SegueHandlerType , AlertsPresentable{
     
     enum SegueIdentifier : String {
         case feed_detailview
         case post_feedview
     }
-    
-    typealias T = HalatFeedsViewModel
     
     @IBOutlet fileprivate weak var tableView : UITableView!
     private var viewModel : HalatFeedsViewModel?
@@ -31,7 +29,7 @@ class HalatFeedsViewController: UIViewController , Injectable , SegueHandlerType
         viewModel?.getAllFeeds()
     }
     
-    func inject(_ viewModel : T) {
+    func inject(_ viewModel : HalatFeedsViewModel) {
         self.viewModel = viewModel
     }
     
@@ -42,7 +40,7 @@ class HalatFeedsViewController: UIViewController , Injectable , SegueHandlerType
     func bindUI(){
         viewModel?.showAlert = {[weak self] (title , message) in
             guard let this = self else {return}
-            this.showAlertControllerWithOkTitle(title: title, message: message)
+            this.showAlert(with: title, and: message)
         }
         viewModel?.showLoader = { [weak self] in
             guard let this = self else {return}
@@ -78,12 +76,12 @@ class HalatFeedsViewController: UIViewController , Injectable , SegueHandlerType
             
         case .feed_detailview:
             
-            let destVc = segue.destination as! FeedDetailViewController
+            guard let destVc = segue.destination as? FeedDetailViewController else {return}
             destVc.inject((viewModel?.getFeedDetailViewModel())!)
             
         case .post_feedview:
            
-            let destVc = segue.destination as! PostFeedViewController
+            guard let destVc = segue.destination as? PostFeedViewController else {return}
             destVc.inject((viewModel?.getPostFeedViewModel())!)
             
         }
