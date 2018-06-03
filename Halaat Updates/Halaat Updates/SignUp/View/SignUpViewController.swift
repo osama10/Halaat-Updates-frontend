@@ -11,12 +11,9 @@ import UIKit
 class SignUpViewController: UIViewController , Injectable , AlertsPresentable {
 
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-   
     @IBOutlet weak var confrimPasswordTextField: UITextField!
-   
     @IBOutlet weak var occupationTextField: UITextField!
  
     var viewModel : SignupViewModel!
@@ -54,6 +51,7 @@ class SignUpViewController: UIViewController , Injectable , AlertsPresentable {
             this.view.makeToastActivity(.center)
         }
     }
+   
     func inject(_ viewModel : SignupViewModel) {
         self.viewModel = viewModel
     }
