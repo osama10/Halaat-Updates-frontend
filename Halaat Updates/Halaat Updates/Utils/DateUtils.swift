@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DateUtils{
+struct DateUtils{
     public static func getTimeStamp()->String{
         
         return String(Date().timeIntervalSince1970)
@@ -25,6 +25,12 @@ class DateUtils{
         let userLastLocationTimeString = formatter.string(from: lastUpdateTime , to : Date()) ?? ""
         return userLastLocationTimeString
         
+    }
+    
+    public static func getDate(with format: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: Date())
     }
 }
 

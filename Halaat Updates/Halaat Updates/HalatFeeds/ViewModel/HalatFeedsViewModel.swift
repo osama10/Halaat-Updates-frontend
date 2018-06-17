@@ -103,6 +103,6 @@ class HalatFeedsViewModelImp : HalatFeedsViewModel {
     }
     
     func getPostFeedViewModel()->PostFeedViewModel{
-        return PostFeedViewModelImp(user: user!)
+        return PostFeedViewModelImp(user: user!, webManager: self.webManager!)
     }
 }

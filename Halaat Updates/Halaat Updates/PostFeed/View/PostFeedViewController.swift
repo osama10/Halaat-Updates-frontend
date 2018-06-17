@@ -20,13 +20,17 @@ class PostFeedViewController: UIViewController , Injectable , AlertsPresentable 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialSettings()
+    }
+
+    private func initialSettings(){
         assertDependencies()
         setUI()
         bindUI()
         addTapGesture(on: postImageView)
         imagePickerUtils = ImagePickerUtils(delegate: self , pickerViewController: self)
     }
-
+    
     func inject(_ viewModel: PostFeedViewModel) {
         self.viewModel = viewModel
     }
@@ -62,6 +66,22 @@ class PostFeedViewController: UIViewController , Injectable , AlertsPresentable 
             guard let this = self else {return}
             this.dismiss(animated: true, completion: nil)
         }
+        viewModel.showPermissionAlert = {[weak self] (title , message , actionButtonTitle) in
+            guard let this = self else {return}
+            this.showPermissionAlert(title: title, message: message, actionButtonTitle: actionButtonTitle, completion: { [weak self] in
+                guard let this = self else {return}
+                this.navigationController?.popViewController(animated: true)
+            })
+        }
+        
+        viewModel.showLoader = {[weak self] in
+            guard let this = self else {return}
+            this.view.makeToastActivity(.center)
+        }
+        viewModel.hideLoader = {[weak self] in
+            guard let this = self else {return}
+            this.view.hideToastActivity()
+        }
     }
     
     private func setUI(){
@@ -76,7 +96,13 @@ class PostFeedViewController: UIViewController , Injectable , AlertsPresentable 
     }
     
     @IBAction func didTapOnPostButton(_ sender: UIBarButtonItem) {
-        viewModel.didTapOnPostButton()
+        let imageData = UIImageJPEGRepresentation(self.postImageView.image!,1.0)!
+        let imageUrl  = "\(viewModel.user.id) - \(DateUtils.getTimeStamp())"
+        let dateFormat = "MMM dd, yyyy"
+        let userId = viewModel.user.id!
+        let feed = PostModel(title: titleTextField.text! , description: descriptonTextView.text! , image: imageUrl, imageData: imageData, date: DateUtils.getDate(with: dateFormat), userId: userId)
+        
+        viewModel.didTapOnPostButton(feed: feed)
     }
     
     @IBAction func didTapOnEditTitleButton(_ sender: UIButton) {

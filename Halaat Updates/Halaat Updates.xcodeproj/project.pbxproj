@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2A1700B7A9B2631A138AC3CC /* Pods_Halaat_Updates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */; };
+		94F26DA4FCDBC9F2A3F34533 /* Pods_Halaat_Updates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */; };
+		E80539A020D528CE00C2CBF6 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E805399F20D528CE00C2CBF6 /* FirebaseManager.swift */; };
+		E80539A220D531E800C2CBF6 /* CallbackTypealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80539A120D531E800C2CBF6 /* CallbackTypealias.swift */; };
 		E805E4C320C449CC0060A424 /* ImagePickertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E805E4C220C449CC0060A424 /* ImagePickertUtils.swift */; };
 		E805E4C520C45C950060A424 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E805E4C420C45C950060A424 /* PostModel.swift */; };
 		E8079CE920BAC02B00587500 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079CE820BAC02B00587500 /* FeedDetailViewController.swift */; };
@@ -31,6 +34,7 @@
 		E89A215F20B585CC006335B2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A215E20B585CC006335B2 /* Extensions.swift */; };
 		E89A216120B585FD006335B2 /* SharedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A216020B585FD006335B2 /* SharedModels.swift */; };
 		E89A216320B587DF006335B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89A216220B587DF006335B2 /* Constants.swift */; };
+		E8D00C5920CE900D00A19F5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8D00C5820CE8CAF00A19F5D /* GoogleService-Info.plist */; };
 		E8D3FF6620BADDA000398F5B /* PostFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF6520BADDA000398F5B /* PostFeedViewController.swift */; };
 		E8D3FF6820BADDAD00398F5B /* PostFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF6720BADDAD00398F5B /* PostFeedViewModel.swift */; };
 		E8D3FF6F20BBCF8300398F5B /* SignupModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D3FF6E20BBCF8300398F5B /* SignupModels.swift */; };
@@ -65,14 +69,16 @@
 		E8FE926420BBF6F200C240A3 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FE924820BBD3C900C240A3 /* Models.swift */; };
 		E8FE926520BBF6F200C240A3 /* HalatFeedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8775DDE20B99BA8001282BA /* HalatFeedsViewModel.swift */; };
 		E8FE926620BBF6F200C240A3 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8079CE820BAC02B00587500 /* FeedDetailViewController.swift */; };
-		E8FE926820BBF6F200C240A3 /* Pods_Halaat_Updates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */; };
 		E8FE926A20BBF6F200C240A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89A213620B528CA006335B2 /* LaunchScreen.storyboard */; };
 		E8FE926B20BBF6F200C240A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E89A213420B528CA006335B2 /* Assets.xcassets */; };
 		E8FE926C20BBF6F200C240A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89A213120B528CA006335B2 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DBBA209102DEF1F61A5B8714 /* Pods-Halaat Updates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halaat Updates.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates.debug.xcconfig"; sourceTree = "<group>"; };
+		196421135C0D7C4A86EC4858 /* Pods-Halaat Updates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halaat Updates.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates.debug.xcconfig"; sourceTree = "<group>"; };
+		63FFADA14E44DA7A65B4C5C1 /* Pods-Halaat Updates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halaat Updates.release.xcconfig"; path = "Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates.release.xcconfig"; sourceTree = "<group>"; };
+		E805399F20D528CE00C2CBF6 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		E80539A120D531E800C2CBF6 /* CallbackTypealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackTypealias.swift; sourceTree = "<group>"; };
 		E805E4C220C449CC0060A424 /* ImagePickertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickertUtils.swift; sourceTree = "<group>"; };
 		E805E4C420C45C950060A424 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		E8079CE820BAC02B00587500 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +104,8 @@
 		E89A215E20B585CC006335B2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E89A216020B585FD006335B2 /* SharedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedModels.swift; sourceTree = "<group>"; };
 		E89A216220B587DF006335B2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E8D00C5720CE8C9D00A19F5D /* GoogleService-Info (4).plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (4).plist"; sourceTree = "<group>"; };
+		E8D00C5820CE8CAF00A19F5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8D3FF6520BADDA000398F5B /* PostFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedViewController.swift; sourceTree = "<group>"; };
 		E8D3FF6720BADDAD00398F5B /* PostFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedViewModel.swift; sourceTree = "<group>"; };
 		E8D3FF6E20BBCF8300398F5B /* SignupModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModels.swift; sourceTree = "<group>"; };
@@ -108,7 +116,6 @@
 		E8FE924820BBD3C900C240A3 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		E8FE927220BBF6F200C240A3 /* Halaat Updates copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halaat Updates copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8FE927320BBF6F200C240A3 /* Halaat Updates copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Halaat Updates copy-Info.plist"; path = "/Users/venturedive/Halaat-Updates-frontend-/Halaat Updates/Halaat Updates copy-Info.plist"; sourceTree = "<absolute>"; };
-		EF5A1945597EF585AFD3DF49 /* Pods-Halaat Updates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halaat Updates.release.xcconfig"; path = "Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates.release.xcconfig"; sourceTree = "<group>"; };
 		F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Halaat_Updates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A1700B7A9B2631A138AC3CC /* Pods_Halaat_Updates.framework in Frameworks */,
+				94F26DA4FCDBC9F2A3F34533 /* Pods_Halaat_Updates.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +133,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8FE926820BBF6F200C240A3 /* Pods_Halaat_Updates.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +142,8 @@
 		65BA1E8624AEA7BBB6051BE1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DBBA209102DEF1F61A5B8714 /* Pods-Halaat Updates.debug.xcconfig */,
-				EF5A1945597EF585AFD3DF49 /* Pods-Halaat Updates.release.xcconfig */,
+				196421135C0D7C4A86EC4858 /* Pods-Halaat Updates.debug.xcconfig */,
+				63FFADA14E44DA7A65B4C5C1 /* Pods-Halaat Updates.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -144,6 +151,7 @@
 		DB9F571B5AA4BA19FE69714B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E8D00C5720CE8C9D00A19F5D /* GoogleService-Info (4).plist */,
 				F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */,
 			);
 			name = Frameworks;
@@ -264,6 +272,7 @@
 				E89A213420B528CA006335B2 /* Assets.xcassets */,
 				E89A213620B528CA006335B2 /* LaunchScreen.storyboard */,
 				E89A213920B528CA006335B2 /* Info.plist */,
+				E8D00C5820CE8CAF00A19F5D /* GoogleService-Info.plist */,
 			);
 			path = "Halaat Updates";
 			sourceTree = "<group>";
@@ -275,6 +284,8 @@
 				E89A214820B52CA0006335B2 /* WebManager.swift */,
 				E89A215920B5357C006335B2 /* WebRoutes.swift */,
 				E8FE924820BBD3C900C240A3 /* Models.swift */,
+				E805399F20D528CE00C2CBF6 /* FirebaseManager.swift */,
+				E80539A120D531E800C2CBF6 /* CallbackTypealias.swift */,
 			);
 			path = WebManager;
 			sourceTree = "<group>";
@@ -443,12 +454,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8FE926F20BBF6F200C240A3 /* Build configuration list for PBXNativeTarget "Halaat Updates copy" */;
 			buildPhases = (
-				E8FE924B20BBF6F200C240A3 /* [CP] Check Pods Manifest.lock */,
 				E8FE924C20BBF6F200C240A3 /* Sources */,
 				E8FE926720BBF6F200C240A3 /* Frameworks */,
 				E8FE926920BBF6F200C240A3 /* Resources */,
-				E8FE926D20BBF6F200C240A3 /* [CP] Embed Pods Frameworks */,
-				E8FE926E20BBF6F200C240A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -503,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E89A213820B528CA006335B2 /* LaunchScreen.storyboard in Resources */,
+				E8D00C5920CE900D00A19F5D /* GoogleService-Info.plist in Resources */,
 				E89A213520B528CA006335B2 /* Assets.xcassets in Resources */,
 				E89A213320B528CA006335B2 /* Main.storyboard in Resources */,
 			);
@@ -529,14 +538,22 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -576,61 +593,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E8FE924B20BBF6F200C240A3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Halaat Updates-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8FE926D20BBF6F200C240A3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8FE926E20BBF6F200C240A3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -649,6 +611,7 @@
 				E8D3FF6620BADDA000398F5B /* PostFeedViewController.swift in Sources */,
 				E8D3FF6F20BBCF8300398F5B /* SignupModels.swift in Sources */,
 				E89A215A20B5357C006335B2 /* WebRoutes.swift in Sources */,
+				E80539A220D531E800C2CBF6 /* CallbackTypealias.swift in Sources */,
 				E8D3FF6820BADDAD00398F5B /* PostFeedViewModel.swift in Sources */,
 				E8079CEB20BAC0D600587500 /* FeedDetailViewModel.swift in Sources */,
 				E89A214F20B52DE1006335B2 /* Utils.swift in Sources */,
@@ -657,6 +620,7 @@
 				E89A216120B585FD006335B2 /* SharedModels.swift in Sources */,
 				E805E4C520C45C950060A424 /* PostModel.swift in Sources */,
 				E89A214020B52B8A006335B2 /* AlamofireManager.swift in Sources */,
+				E80539A020D528CE00C2CBF6 /* FirebaseManager.swift in Sources */,
 				E89A214920B52CA0006335B2 /* WebManager.swift in Sources */,
 				E89A216320B587DF006335B2 /* Constants.swift in Sources */,
 				E8D3FF7320BBD01A00398F5B /* SignupViewModel.swift in Sources */,
@@ -833,7 +797,7 @@
 		};
 		E89A213D20B528CA006335B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBBA209102DEF1F61A5B8714 /* Pods-Halaat Updates.debug.xcconfig */;
+			baseConfigurationReference = 196421135C0D7C4A86EC4858 /* Pods-Halaat Updates.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -848,7 +812,7 @@
 		};
 		E89A213E20B528CA006335B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF5A1945597EF585AFD3DF49 /* Pods-Halaat Updates.release.xcconfig */;
+			baseConfigurationReference = 63FFADA14E44DA7A65B4C5C1 /* Pods-Halaat Updates.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -863,7 +827,6 @@
 		};
 		E8FE927020BBF6F200C240A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBBA209102DEF1F61A5B8714 /* Pods-Halaat Updates.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -878,7 +841,6 @@
 		};
 		E8FE927120BBF6F200C240A3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF5A1945597EF585AFD3DF49 /* Pods-Halaat Updates.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

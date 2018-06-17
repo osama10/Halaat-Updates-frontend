@@ -9,9 +9,10 @@
 import Foundation
 
 struct WebRoutes {
-    public static let baseUrl = "http://192.168.0.102:8080/halaatupdates/"
+    public static let baseUrl = "http://192.168.0.106:8080/halaatupdates/"
     public static let signin = "signin"
     public static let getAllUpdates = "getallupdates"
     public static let signup = "signup"
+    public static let postFeed = "postupdate"
     
 }

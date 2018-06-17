@@ -28,7 +28,6 @@ extension UIView  {
         self.layer.shadowOffset = CGSize.zero
         self.layer.shadowOpacity = opacity
         self.layer.shadowRadius = shadowRadius
-        
     }
 }
 
@@ -37,31 +36,6 @@ extension UICollectionView{
     var collectionViewFlowLayout: UICollectionViewFlowLayout{
         return collectionViewLayout as! UICollectionViewFlowLayout
     }
-}
-
-extension UIViewController{
-    
-//    func showAlertControllerWithOkTitle(title: String? = nil,message: String? = nil){
-//        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-//        alertController.addAction(action)
-//        present(alertController, animated: true, completion: nil)
-//        
-//    }
-//    
-//    func alertTextBox(title : String , message : String , actionButtonTitle : String , completion :  @escaping () -> Void){
-//        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-//        
-//        let saveAction = UIAlertAction(title: actionButtonTitle , style: .default, handler: {
-//            alert -> Void in
-//            
-//            completion()
-//        })
-//        
-//        alertController.addAction(saveAction)
-//        present(alertController, animated: true, completion: nil)
-//    }
-//    
 }
 
 extension Int{

@@ -12,6 +12,7 @@ struct PostModel {
     var title = ""
     var description = ""
     var image = ""
+    var imageData = Data()
     var date = ""
     var userId = -1
 

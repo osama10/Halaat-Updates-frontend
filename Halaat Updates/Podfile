@@ -6,5 +6,8 @@ target 'Halaat Updates' do
       pod 'Alamofire', '~> 4.2.0'
       pod 'SDWebImage', '~> 4.0'
       pod 'ObjectMapper', '~> 2.2'
-
+      pod 'Firebase/Core'
+      pod 'Firebase/Auth'
+      pod 'Firebase/Database'
+      pod 'Firebase/Storage'
 end

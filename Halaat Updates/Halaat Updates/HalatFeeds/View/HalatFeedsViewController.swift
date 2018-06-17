@@ -19,14 +19,18 @@ class HalatFeedsViewController: UIViewController , Injectable , SegueHandlerType
     private var viewModel : HalatFeedsViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-        assertDependencies()
-        tableView.delegate = self
-        tableView.dataSource = self
-        bindUI()
+        initialSettings()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         viewModel?.getAllFeeds()
+    }
+    
+    private func initialSettings(){
+        assertDependencies()
+        tableView.delegate = self
+        tableView.dataSource = self
+        bindUI()
     }
     
     func inject(_ viewModel : HalatFeedsViewModel) {
@@ -91,7 +95,7 @@ class HalatFeedsViewController: UIViewController , Injectable , SegueHandlerType
 
 extension HalatFeedsViewController : UITableViewDataSource , UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (viewModel?.numberOfRows())!
+        return (viewModel?.numberOfRows()) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

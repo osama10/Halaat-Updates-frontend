@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class AlamofireManager{
+struct AlamofireManager{
     func makeRequest(request : Request,  success:@escaping (Any) -> Void, failure:@escaping (Error) -> Void){
         
         

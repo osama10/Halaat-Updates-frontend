@@ -10,15 +10,19 @@ import Foundation
 
 protocol PostFeedViewModel{
     
-    var user : UserModel{get set}
+    var user : UserModel{get}
+    var webManager : WebManager{get}
     
     var makeTitleEditable : (()->())?{get set}
     var makeDescriptionEditable : (()->())?{get set}
     var openImagePickerController : (()->())?{get set}
     var showAlert : ((_ title : String , _ message : String)->())?{get set}
+    var showPermissionAlert : ((_ title : String , _ message : String , _ actionButtonTitle : String )->())?{get set}
     var dismissViewController : (() -> ())?{get set}
+    var showLoader :(()->())?{get set}
+    var hideLoader :(()->())?{get set}
     
-    func didTapOnPostButton()
+    func didTapOnPostButton(feed :PostModel)
     func didTapOnEditTitleButton()
     func didTapOnEditDescriptionButton()
     func didTapOnPicture()
@@ -27,22 +31,28 @@ protocol PostFeedViewModel{
     func didTapOnSelectPicture()
 }
 
-class PostFeedViewModelImp : PostFeedViewModel {
+struct PostFeedViewModelImp : PostFeedViewModel {
     
     var user: UserModel
+    var webManager: WebManager
     
     var makeTitleEditable: (() -> ())?
     var makeDescriptionEditable: (() -> ())?
     var openImagePickerController: (() -> ())?
     var showAlert: ((String, String) -> ())?
     var dismissViewController : (() -> ())?
+    var showLoader: (() -> ())?
+    var showPermissionAlert: ((String, String, String) -> ())?
+    var hideLoader: (() -> ())?
     
-    init(user : UserModel) {
+    init(user : UserModel , webManager : WebManager) {
+        self.webManager = webManager
         self.user = user
     }
     
-    func didTapOnPostButton() {
-        
+    func didTapOnPostButton(feed :PostModel) {
+        self.showLoader?()
+        postFeed(with: feed)
     }
     
     func didTapOnEditTitleButton() {
@@ -67,5 +77,17 @@ class PostFeedViewModelImp : PostFeedViewModel {
     
     func didTapOnSelectPicture(){
         openImagePickerController?()
+    }
+    
+    private func postFeed(with feed : PostModel){
+        webManager.postFeed(postData: feed) { (response) in
+            self.hideLoader?()
+            self.handlePostFeedResponse(response: response)
+        }
+    }
+    
+    private func handlePostFeedResponse(response : Response){
+        
+        (response.responseCode == 0) ? self.showPermissionAlert?("" , "Something unexpected occur , please try alter" , "OK") : self.showPermissionAlert?("Feed Posted" , "Your feed posted successfully" , "OK")
     }
 }
