@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A1700B7A9B2631A138AC3CC /* Pods_Halaat_Updates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */; };
 		94F26DA4FCDBC9F2A3F34533 /* Pods_Halaat_Updates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */; };
+		E80092BA20DFFA0E00B01C54 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80092B920DFFA0E00B01C54 /* Endpoint.swift */; };
 		E80539A020D528CE00C2CBF6 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E805399F20D528CE00C2CBF6 /* FirebaseManager.swift */; };
 		E80539A220D531E800C2CBF6 /* CallbackTypealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80539A120D531E800C2CBF6 /* CallbackTypealias.swift */; };
 		E805E4C320C449CC0060A424 /* ImagePickertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E805E4C220C449CC0060A424 /* ImagePickertUtils.swift */; };
@@ -77,6 +78,7 @@
 /* Begin PBXFileReference section */
 		196421135C0D7C4A86EC4858 /* Pods-Halaat Updates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halaat Updates.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates.debug.xcconfig"; sourceTree = "<group>"; };
 		63FFADA14E44DA7A65B4C5C1 /* Pods-Halaat Updates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Halaat Updates.release.xcconfig"; path = "Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates.release.xcconfig"; sourceTree = "<group>"; };
+		E80092B920DFFA0E00B01C54 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		E805399F20D528CE00C2CBF6 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		E80539A120D531E800C2CBF6 /* CallbackTypealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackTypealias.swift; sourceTree = "<group>"; };
 		E805E4C220C449CC0060A424 /* ImagePickertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickertUtils.swift; sourceTree = "<group>"; };
@@ -155,6 +157,22 @@
 				F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E80092B720DFF7FE00B01C54 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E80092B820DFF94A00B01C54 /* Services */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E80092B820DFF94A00B01C54 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E80092B920DFFA0E00B01C54 /* Endpoint.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		E8079CE420BABFD100587500 /* FeedDetail */ = {
@@ -262,6 +280,7 @@
 				E89A215220B53379006335B2 /* 3rdParties */,
 				E89A214D20B52DAF006335B2 /* Utils */,
 				E89A214120B52BE0006335B2 /* WebManager */,
+				E80092B720DFF7FE00B01C54 /* Network */,
 				E89A214320B52C3B006335B2 /* SignIn */,
 				E8D3FF6A20BBCED100398F5B /* SignUp */,
 				E8775DD820B99A58001282BA /* HalatFeeds */,
@@ -607,6 +626,7 @@
 				E8D3FF7120BBCFF600398F5B /* SignUpViewController.swift in Sources */,
 				E89A213020B528CA006335B2 /* SignInViewController.swift in Sources */,
 				E805E4C320C449CC0060A424 /* ImagePickertUtils.swift in Sources */,
+				E80092BA20DFFA0E00B01C54 /* Endpoint.swift in Sources */,
 				E89A212E20B528CA006335B2 /* AppDelegate.swift in Sources */,
 				E8D3FF6620BADDA000398F5B /* PostFeedViewController.swift in Sources */,
 				E8D3FF6F20BBCF8300398F5B /* SignupModels.swift in Sources */,
