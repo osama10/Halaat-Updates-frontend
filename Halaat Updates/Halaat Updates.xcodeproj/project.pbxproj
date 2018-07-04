@@ -117,7 +117,6 @@
 		E8DCEFFC20BA18F5000734A8 /* HalatFeedsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalatFeedsCellViewModel.swift; sourceTree = "<group>"; };
 		E8FE924820BBD3C900C240A3 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		E8FE927220BBF6F200C240A3 /* Halaat Updates copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halaat Updates copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8FE927320BBF6F200C240A3 /* Halaat Updates copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Halaat Updates copy-Info.plist"; path = "/Users/venturedive/Halaat-Updates-frontend-/Halaat Updates/Halaat Updates copy-Info.plist"; sourceTree = "<absolute>"; };
 		F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Halaat_Updates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -258,7 +257,6 @@
 				E89A212B20B528CA006335B2 /* Products */,
 				65BA1E8624AEA7BBB6051BE1 /* Pods */,
 				DB9F571B5AA4BA19FE69714B /* Frameworks */,
-				E8FE927320BBF6F200C240A3 /* Halaat Updates copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
