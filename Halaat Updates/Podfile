@@ -10,4 +10,6 @@ target 'Halaat Updates' do
       pod 'Firebase/Auth'
       pod 'Firebase/Database'
       pod 'Firebase/Storage'
+      pod 'RxSwift'
+      pod 'RxCocoa'
 end

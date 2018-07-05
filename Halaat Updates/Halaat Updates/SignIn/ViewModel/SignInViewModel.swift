@@ -10,53 +10,77 @@
 
 import Foundation
 import ObjectMapper
+import RxSwift
 
 protocol SignInViewModel {
-    
-    var showAlert : ((_ title : String , _ message : String )->())?{get set}
-    var success : (()->())?{get set}
-    var showLoader : (()->())?{get set}
-    var hideLoader : (()->())?{get set}
-    var returnPressed : (()->())?{get set}
     
     var webManager : WebManager!{get set}
     var user : UserModel?{get}
     
-    func didTapOnLogin(email : String , password : String)
     func didReturnPressed()
     func getHalatFeedsViewModel(user : UserModel)->HalatFeedsViewModel
     func getSignupViewModel()->SignupViewModel
+    
+    var email : Variable<String>{get set}
+    var password : Variable<String>{get set}
+    var signinButtonTap : PublishSubject<Void>{get set}
+    var showLoader : Variable<Bool>{get set}
+    var closeKeyboard : Variable<Bool>{get set}
+    var showAlert : Variable<(String,String)>{get set}
+    var loginToMainView : Variable<Bool>{get set}
 }
 
 
-class SignInViewModelImp : SignInViewModel{
-    
-    var showAlert : ((_ title : String , _ message : String )->())?
-    var success : (()->())?
-    var showLoader : (()->())?
-    var hideLoader : (()->())?
+struct SignInViewModelImp : SignInViewModel{
     var returnPressed : (()->())?
     
     var webManager  : WebManager!
     var user : UserModel?
     
+    var email : Variable<String> = Variable<String>("")
+    var password : Variable<String> = Variable<String>("")
+    var signinButtonTap: PublishSubject<Void> = PublishSubject<Void>()
+    var showLoader: Variable<Bool> = Variable<Bool>(false)
+    var closeKeyboard: Variable<Bool> = Variable<Bool>(false)
+    var showAlert: Variable<(String,String)> = Variable<(String,String)>(("" , ""))
+   var loginToMainView: Variable<Bool> = Variable<Bool>(false)
+    
+    var disposeBag = DisposeBag()
+    
     init(webManager : WebManager) {
         self.webManager = webManager
+        subscribeObservables()
     }
     
-    func didTapOnLogin(email : String , password : String){
-        if(Utils.isTextFieldEmpty(textArray: [email , password])){
-            showAlert?("Textfields emtpy" , "Please fill all the Textfields")
-        }else if(!Utils.isValidEmail(testStr: email)){
-            showAlert?("InValid Email" , "Please enter a valid email")
+    private func subscribeObservables(){
+        signinButtonTap
+            .subscribe { _ in
+                var this = self
+                this.didTapOnLogin()
+            }
+            .disposed(by: disposeBag)
+   
+    }
+    
+    
+    private mutating func didTapOnLogin(){
+        
+        if(Utils.isTextFieldEmpty(textArray: [self.email.value , self.password.value])){
+            let title = "Textfields emtpy"
+            let message = "Please fill all the Textfields"
+            showAlert.value = (title , message)
+        }else if(!Utils.isValidEmail(testStr: self.email.value)){
+            let title = "InValid Email"
+            let message = "Please enter a valid email"
+            showAlert.value = (title , message)
         }else{
-            let credetials = SignInCred(email: email, password: password)
+            let credetials = SignInCred(email: self.email.value, password: self.password.value)
             login(credentials: credetials)
         }
     }
     
     func didReturnPressed(){
-        returnPressed?()
+        closeKeyboard.value = true
     }
     
     func getHalatFeedsViewModel(user : UserModel) -> HalatFeedsViewModel {
@@ -66,38 +90,44 @@ class SignInViewModelImp : SignInViewModel{
     func getSignupViewModel()->SignupViewModel{
         return SignupViewModelImp(webManager: webManager)
     }
-
-    fileprivate func login(credentials : SignInCred){
+    
+    fileprivate mutating func login(credentials : SignInCred){
         
-        showLoader?()
-        
-        webManager.signIn(credential: credentials) { [weak self] (response) in
-            guard let this = self else{return}
-            this.hideLoader?()
+        self.showLoader.value = true
+        var this = self
+        webManager.signIn(credential: credentials) {  (response) in
+            
+            this.showLoader.value = false
             
             if(response.responseCode == 0){
-                this.showAlert?("Login Failed" , response.response["response"] as? String ?? "There is something wrong. Please try later.")
+                let title = "Login Failed"
+                let message = response.response["response"] as? String ?? "There is something wrong. Please try later."
+                this.showAlert.value = (title , message)
+                
             }else{
                 let responseCode = (response.response["response"] as! [String : AnyObject])["statusCode"] as! Int
                 if(responseCode == 201){
-                let responseBody = (response.response["response"] as! [String : AnyObject])["responseBody"] as! [String : AnyObject]
-               
-                let userDict = responseBody["Data"] as! [String  : AnyObject]
-               
-                guard let user = Mapper<UserModel>().map(JSON: userDict) else {
-                     this.showAlert?("Login Failed" , "There is something wrong. Please try later.")
-                    return
+                    let responseBody = (response.response["response"] as! [String : AnyObject])["responseBody"] as! [String : AnyObject]
+                    
+                    let userDict = responseBody["Data"] as! [String  : AnyObject]
+                    
+                    guard let user = Mapper<UserModel>().map(JSON: userDict) else {
+                        let title = "Login Failed"
+                        let message =  "There is something wrong. Please try later."
+                        this.showAlert.value = (title , message)
+                        return
+                    }
+                    
+                    this.user = user
+                    this.loginToMainView.value = true
                 }
-               
-                this.user = user
-                this.success?()
-            }
                 else{
                     let responseBody = (response.response["response"] as! [String : AnyObject])["responseBody"] as! [String : AnyObject]
                     
-                    let errorMessage = responseBody["Data"] as! String
-                    
-                    this.showAlert?("Login Failed" , errorMessage)
+                    let title = "Login Failed"
+                    let message =  responseBody["Data"] as! String
+
+                    this.showAlert.value = (title , message)
                 }
             }
         }

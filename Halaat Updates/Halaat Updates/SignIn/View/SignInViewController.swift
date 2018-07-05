@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class SignInViewController: UIViewController , SegueHandlerType , AlertsPresentable  {
     
@@ -17,6 +19,10 @@ class SignInViewController: UIViewController , SegueHandlerType , AlertsPresenta
     
     @IBOutlet fileprivate weak var tfEmail : UITextField!
     @IBOutlet fileprivate weak var tfPassword : UITextField!
+    @IBOutlet weak var btnSignIn: UIButton!
+    @IBOutlet weak var btnSignup: UIButton!
+    
+    var disposeBag = DisposeBag()
     
     var viewModel : SignInViewModel!
     override func viewDidLoad() {
@@ -26,48 +32,84 @@ class SignInViewController: UIViewController , SegueHandlerType , AlertsPresenta
     }
     
     private func bindUI(){
-        viewModel.showAlert = {[weak self] (title , message) in
-            guard let this = self else {return}
-            this.showAlert(with: title, and: message)
-        }
-        viewModel.showLoader = { [weak self] in
-            guard let this = self else {return}
-            this.view.makeToastActivity(.center)
-        }
-        viewModel.hideLoader = { [weak self] in
-            guard let this = self else {return}
-            this.view.hideToastActivity()
-        }
-        viewModel.success = { [weak self]  in
-            guard let this = self else {return}
-            this.performSegueWithIdentifier(segueIdentifier: .mainview, sender: self)
-        }
-        viewModel.returnPressed = { [weak self] in
-            guard let this = self else {return}
-            this.view.endEditing(true)
-        }
+        textFieldBindings()
+        buttonBindings()
+        actionsBindings()
     }
     
-    @IBAction func didTapOnLogin(sender : UIButton){
-        viewModel.didTapOnLogin(email: tfEmail.text!, password: tfPassword.text!)
+    private func textFieldBindings(){
+       
+        tfEmail.rx.text
+            .map{$0 ?? ""}
+            .bind(to: viewModel.email)
+            .disposed(by: disposeBag)
+        
+        tfPassword.rx.text
+            .map{$0 ?? ""}
+            .bind(to: viewModel.password)
+            .disposed(by: disposeBag)
+        
+        let emailDidEndObservable = tfEmail.rx.controlEvent(.editingDidEnd).asObservable()
+        let passwordDidEndObservable = tfPassword.rx.controlEvent(.editingDidEnd).asObservable()
+        
+        Observable.combineLatest(emailDidEndObservable, passwordDidEndObservable)
+            .subscribe({ [weak self] _ in
+                guard let `self` =  self else { return }
+                self.viewModel.didReturnPressed()
+            })
+            .disposed(by: disposeBag)
+    
     }
     
-    
-    
-    @IBAction func returnPressed(sender: UITextField) {
-        viewModel.didReturnPressed()
+    private func buttonBindings(){
+       
+        btnSignIn.rx.tap
+            .bind(to : viewModel.signinButtonTap)
+            .disposed(by: disposeBag)
     }
+    
+    private func actionsBindings(){
+        viewModel.showLoader.asObservable()
+            .subscribe(onNext :{  [weak self] bool in
+                guard let `self` =  self else { return }
+                (bool) ? self.view.makeToastActivity(.center) : self.view.hideToastActivity()
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.closeKeyboard.asObservable()
+            .subscribe(onNext :{  [weak self] bool in
+                guard let `self` =  self else { return }
+                self.view.endEditing(true)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.showAlert.asObservable()
+            .subscribe(onNext: { [weak self] (title , message) in
+                guard let `self` =  self else { return }
+                self.showAlert(with: title, and: message)
+            })
+            .disposed(by: disposeBag)
+     
+        viewModel.loginToMainView.asObservable()
+            .subscribe(onNext: { [weak self](doLogin) in
+                guard let `self` =  self else { return }
+                if(doLogin){
+                    self.performSegueWithIdentifier(segueIdentifier: .mainview, sender: self)
+                }
+            })
+            .disposed(by: disposeBag)
+      }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segueIdentifierForSegue(segue: segue){
-       
+            
         case .mainview :
             let destVC = (segue.destination as! UINavigationController).viewControllers.first as! HalatFeedsViewController
             destVC.inject(viewModel.getHalatFeedsViewModel(user: viewModel.user!))
         case .signupview:
             let destVc = segue.destination as! SignUpViewController
             destVc.inject(viewModel.getSignupViewModel())
-        
+            
         }
     }
 }

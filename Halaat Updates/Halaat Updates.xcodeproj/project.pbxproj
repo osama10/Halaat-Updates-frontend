@@ -115,7 +115,6 @@
 		E8DCEFFC20BA18F5000734A8 /* HalatFeedsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalatFeedsCellViewModel.swift; sourceTree = "<group>"; };
 		E8FE924820BBD3C900C240A3 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		E8FE927220BBF6F200C240A3 /* Halaat Updates copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halaat Updates copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8FE927320BBF6F200C240A3 /* Halaat Updates copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Halaat Updates copy-Info.plist"; path = "/Users/venturedive/Halaat-Updates-frontend-/Halaat Updates/Halaat Updates copy-Info.plist"; sourceTree = "<absolute>"; };
 		F8027B9DA42F4A91A101BE90 /* Pods_Halaat_Updates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Halaat_Updates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -240,7 +239,6 @@
 				E89A212B20B528CA006335B2 /* Products */,
 				65BA1E8624AEA7BBB6051BE1 /* Pods */,
 				DB9F571B5AA4BA19FE69714B /* Frameworks */,
-				E8FE927320BBF6F200C240A3 /* Halaat Updates copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -439,7 +437,6 @@
 				E89A212720B528CA006335B2 /* Frameworks */,
 				E89A212820B528CA006335B2 /* Resources */,
 				2E931170626F47122AAA25D5 /* [CP] Embed Pods Frameworks */,
-				45BE2010CBB14E3A3478A43B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -541,6 +538,8 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -551,6 +550,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -558,21 +559,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		45BE2010CBB14E3A3478A43B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Halaat Updates/Pods-Halaat Updates-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8FA0F0547237DF1B5452DEB5 /* [CP] Check Pods Manifest.lock */ = {
