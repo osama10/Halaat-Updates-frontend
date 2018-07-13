@@ -62,7 +62,7 @@ class SignInViewController: UIViewController , SegueHandlerType , AlertsPresenta
     }
     
     private func buttonBindings(){
-       
+        
         btnSignIn.rx.tap
             .bind(to : viewModel.signinButtonTap)
             .disposed(by: disposeBag)

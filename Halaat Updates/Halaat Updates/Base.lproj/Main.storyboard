@@ -180,9 +180,6 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="didTapOnSignupButton:" destination="XOJ-ob-Gsv" eventType="touchUpInside" id="FN0-vx-o4M"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gm2-2J-UKk">
                                 <rect key="frame" x="10" y="50" width="20" height="20"/>
@@ -191,9 +188,6 @@
                                     <constraint firstAttribute="height" constant="20" id="xv4-hM-EjL"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="back_button_image"/>
-                                <connections>
-                                    <action selector="didTapOnBackButtonWithSender:" destination="XOJ-ob-Gsv" eventType="touchUpInside" id="B6h-61-fiM"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Halaat Updates" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqI-6w-GH5">
                                 <rect key="frame" x="87.5" y="42.5" width="199.5" height="36"/>
@@ -230,6 +224,8 @@
                         <viewLayoutGuide key="safeArea" id="dgG-xP-gTL"/>
                     </view>
                     <connections>
+                        <outlet property="btnBack" destination="Gm2-2J-UKk" id="wxk-iD-dox"/>
+                        <outlet property="btnSignup" destination="KSR-xs-Wbg" id="888-2m-AL5"/>
                         <outlet property="confrimPasswordTextField" destination="F53-Yh-YXt" id="Bec-R7-2iZ"/>
                         <outlet property="emailTextField" destination="KRF-LE-Tv3" id="DGS-66-G8v"/>
                         <outlet property="nameTextField" destination="apW-I0-Sfc" id="Ifl-24-zWu"/>

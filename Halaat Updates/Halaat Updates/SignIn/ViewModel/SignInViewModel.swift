@@ -43,7 +43,7 @@ struct SignInViewModelImp : SignInViewModel{
     var showLoader: Variable<Bool> = Variable<Bool>(false)
     var closeKeyboard: Variable<Bool> = Variable<Bool>(false)
     var showAlert: Variable<(String,String)> = Variable<(String,String)>(("" , ""))
-   var loginToMainView: Variable<Bool> = Variable<Bool>(false)
+    var loginToMainView: Variable<Bool> = Variable<Bool>(false)
     
     var disposeBag = DisposeBag()
     

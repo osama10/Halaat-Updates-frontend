@@ -73,3 +73,22 @@ struct Update : Mappable {
         user <- map[UpdateKeys.user.rawValue]
     }
 }
+
+enum AlertType{
+    case alert
+    case permissionAlert
+}
+
+struct AlertsData {
+    var title : String
+    var message : String
+    var buttonText : String?
+    var type : AlertType
+    
+    init(title : String , message : String , buttonText : String? , type : AlertType) {
+        self.title = title
+        self.message = message
+        self.buttonText = buttonText
+        self.type = type
+    }
+}
