@@ -27,17 +27,14 @@ protocol SignupViewModel {
 
 struct SignupViewModelImp : SignupViewModel {
     
-    
-    var showPermissionAlert: ((_ title : String , _ message : String ,_ actionButtonTitle : String) -> ())?
-    
-    var webManager : WebManager!
-    
     private enum ValidationResults {
         case valid
         case textfieldsEmpty
         case passwordDoesntMatch
         case invalidEmail
     }
+    
+    var webManager : WebManager!
     
     var userName: Variable<String>
     var email: Variable<String>

@@ -87,7 +87,6 @@ class Utils {
     }
     
     class func makeViewCircular(view : UIView , borderWidth : CGFloat , borderColor : UIColor){
-        
         view.layer.borderWidth = borderWidth
         view.layer.masksToBounds = false
         view.layer.borderColor = borderColor.cgColor
